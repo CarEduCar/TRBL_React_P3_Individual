@@ -6,14 +6,14 @@ interface ButtonProps extends TouchableOpacityProps {
     tipo: priorityProps,
 }
 
-type priorityProps = 'inativo' | 'ativo' | 'desativado';
+type priorityProps =  'ativo' | 'inativo' | 'vazio';
 
 export const Button = ({ title, tipo, ...rest}: ButtonProps) => {
 
     const config = {
         ativo: { style: styles.button1, butStyle: styles.buttonText1},
         inativo: { style: styles.button2, butStyle: styles.buttonText2},
-        desativado: { style: styles.button3, butStyle: styles.buttonText3}
+        vazio: { style: styles.button3, butStyle: styles.buttonText3}
     };
 
     const current = config[tipo];

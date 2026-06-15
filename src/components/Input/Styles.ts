@@ -9,7 +9,12 @@ export const styles = StyleSheet.create({
         borderBottomColor: '#5b5b5b',
         paddingBottom: 5,
         color: "#ffffff",
-        marginBottom: 20,
         fontSize: 16,
-    }
+        marginTop:20,
+    },
+    link: {
+        width: 320,
+        textAlign: "left",
+        color: '#ffffff',
+    },
 });

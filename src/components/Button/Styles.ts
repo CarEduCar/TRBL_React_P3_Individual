@@ -1,47 +1,53 @@
 import { StyleSheet } from "react-native";
 
+const baseButton = {
+    width: 320,
+    height: 42,
+    alignItems: 'center' as const,
+    justifyContent: 'center' as const,
+    marginTop: 20,
+    borderRadius: 25,
+};
+
+const baseText = {
+    fontSize: 15,
+    fontWeight:'bold' as const,
+};
+
 export const styles = StyleSheet.create({
+
+    // ----- Tipo: ativo -----
+
     button1: {
-        width: 320,
+        ...baseButton,
         backgroundColor:'#ff630c',
-        padding: 15,
-        borderRadius: 25,
-        alignItems: 'center',
-        marginTop: 20
-    },
-    button2: {
-        width: 320,
-        backgroundColor:'rgb(0, 0, 0)',
-        padding: 15,
-        borderRadius: 25,
-        alignItems: 'center',
-        marginTop: 20
-
-    },
-    button3: {
-        width: 320,
-        backgroundColor:'rgb(0, 0, 0)',
-        padding: 15,
-        borderRadius: 25,
-        alignItems: 'center',
-        marginTop: 20,
-        borderWidth: 2,
-        borderColor: '#7a7a7a'
-
     },
     buttonText1: {
+        ...baseText,
         color: '#000000',
-        fontSize: 17,
-        fontWeight: 'bold'
+    },
+    
+    // ----- Tipo: inativo -----
+
+    button2: {
+        ...baseButton,
+        backgroundColor:'rgb(0, 0, 0)',
+        borderWidth: 2,
+        borderColor: '#5a5a5a'
     },
     buttonText2: {
-        color: '#ff630c',
-        fontSize: 17,
-        fontWeight: 'bold'
+        ...baseText,
+        color: '#5a5a5a',
+    },
+
+    // ----- Tipo: vazio -----
+
+    button3: {
+        ...baseButton,
+        backgroundColor:'rgb(0, 0, 0)',        
     },
     buttonText3: {
-        color: '#7a7a7a',
-        fontSize: 17,
-        fontWeight: 'bold'
+        ...baseText,
+        color: '#ff630c',
     },
 })
